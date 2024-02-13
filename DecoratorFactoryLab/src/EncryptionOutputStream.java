@@ -14,21 +14,23 @@ public class EncryptionOutputStream extends FilterOutputStream {
 		super.write(encrypt(c));
 	}
 	
-	/*
-	 * Takes a character c and encrypts it with the Caesar cipher 
-	 * if it's a letter and leaves it as is if it's not
-	 * TODO: write the actual Caesar cipher encryption 
-	 */
+
 	int encrypt(int c) {
 		int a = 'a'; // ASCII code of lower-case 'a'
 		int z = 'a' + 25; // ASCII code of lower-case 'z'
+		int A = 'A';
+		int Z = 'A' + 25;
 		
 		// if the character is a lower-case letter:
 		if (a <= c && c <= z) {
-			return 'a'; // a mock-up "cipher": changes all lower-case letters to 'a'
+			return (c - a + (shift % 26 + 26)%26) % 26 + a; // a mock-up "cipher": changes all lower-case letters to 'a'
+		} else if (A <= c && c <= Z) {
+			return (c - A + (shift % 26 + 26)%26) % 26 + A;
 		} else {
 			return c;
 		}
+
+	
 	}
 
 }

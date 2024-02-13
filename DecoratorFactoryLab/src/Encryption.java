@@ -9,6 +9,7 @@ public class Encryption {
 	 * for an output stream
 	 * 
 	 */
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		// text to write:
 		String s = "Hi There! Welcome to my encryption test!";
@@ -16,10 +17,10 @@ public class Encryption {
 		OutputStreamWriter out = null;
 		try {
 			OutputStream out1 = new FileOutputStream(outFile);
-			//TODO: add EncryptionOutputStream to decorate the FileOutputStream
-			// before passing it to the OutputStreamWriter:
-			// out1 = .....
+			out1 = new EncryptionOutputStream(-105, out1);
 			out = new OutputStreamWriter(out1, "UTF-8");
+			
+			
 			out.write(s); // write to the file
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -30,5 +31,7 @@ public class Encryption {
 		}
 		System.out.println();
 	}
+
+
 
 }
