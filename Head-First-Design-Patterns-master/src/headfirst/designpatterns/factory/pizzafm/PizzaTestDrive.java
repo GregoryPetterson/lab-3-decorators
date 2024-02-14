@@ -5,6 +5,7 @@ public class PizzaTestDrive {
 	public static void main(String[] args) {
 		PizzaStore nyStore = new NYPizzaStore();
 		PizzaStore chicagoStore = new ChicagoPizzaStore();
+		PizzaStore MorrisPizzaStore = new MorrisPizzaStore();
  
 		Pizza pizza = nyStore.orderPizza("cheese");
 		System.out.println("Ethan ordered a " + pizza.getName() + "\n");
@@ -29,5 +30,8 @@ public class PizzaTestDrive {
  
 		pizza = chicagoStore.orderPizza("veggie");
 		System.out.println("Joel ordered a " + pizza.getName() + "\n");
+
+		pizza = MorrisPizzaStore.orderPizza("hashbrown");
+		System.out.println("Bill ordered a " + pizza.getName() + "\n");
 	}
 }
