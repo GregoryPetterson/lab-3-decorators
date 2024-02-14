@@ -17,7 +17,7 @@ public class Encryption {
 		OutputStreamWriter out = null;
 		try {
 			OutputStream out1 = new FileOutputStream(outFile);
-			out1 = new EncryptionOutputStream(-105, out1);
+			out1 = new EncryptionOutputStream(-10, out1);
 			out = new OutputStreamWriter(out1, "UTF-8");
 			
 			

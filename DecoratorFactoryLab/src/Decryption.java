@@ -14,7 +14,7 @@ public class Decryption {
         try {
             InputStream in1 = new FileInputStream(inFile);
             in1 = new BufferedInputStream(in1);
-            in = new DecryptionInputStream(10, in1);
+            in = new DecryptionInputStream(-10, in1);
         
         
                 while ((c = in.read()) >= 0) {

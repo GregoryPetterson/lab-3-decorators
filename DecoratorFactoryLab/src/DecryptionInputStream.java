@@ -22,9 +22,9 @@ public class DecryptionInputStream extends FilterInputStream {
 		
 		// if the character is a lower-case letter:
             if (a <= c && c <= z) {
-                return a + (c - shift)%26; // a mock-up "cipher": changes all lower-case letters to 'a'
+                return (((c - a - shift % 26) + 26) % 26) + a; // a mock-up "cipher": changes all lower-case letters to 'a'
             } else if (A <= c && c <= Z) {
-                return (c + A - (shift % 26 + 26)%26 - A); // a mock-up "cipher": changes all upper-case letters to 'A'
+                return (((c - A - shift % 26) + 26) % 26) + A; // a mock-up "cipher": changes all upper-case letters to 'A'
             } else {
                 return c;
             }
