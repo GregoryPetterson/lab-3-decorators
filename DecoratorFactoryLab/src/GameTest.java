@@ -16,5 +16,9 @@ public class GameTest {
             }
         }
 
+        Game War = gameStore.createGame("War");
+
+        
+
     }
 }

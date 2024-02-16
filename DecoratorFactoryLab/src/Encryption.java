@@ -12,7 +12,7 @@ public class Encryption {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		// text to write:
-		String s = "Hi There! Welcome to my encryption test!";
+		String s = "Hi this is Gregory and Tristan's group's encryption. We hope you are having a good day! :)";
 		String outFile = "encrypted.txt";
 		OutputStreamWriter out = null;
 		try {

@@ -36,6 +36,7 @@ public class Point {
 	// and another point
 	public double distance(Point other) {
 		int xd = this.x - other.x;
+
 		int yd = this.y - other.y;
 		return Math.sqrt(xd*xd + yd*yd);
 	}	
