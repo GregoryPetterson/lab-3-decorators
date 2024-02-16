@@ -13,4 +13,7 @@ public class RegularCard implements Card {
 	}
 	
 	// implement toString:
+	public String toString() {
+		return rank + " of " + suit;
+	}
 }
