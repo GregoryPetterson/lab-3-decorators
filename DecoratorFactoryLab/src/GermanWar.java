@@ -1,13 +1,17 @@
 import java.util.ArrayList;
 
-public class War extends Game{
-    public War() {
+public class GermanWar extends Game{
+    public GermanWar() {
+        // makes a deck with one of each card
         deck = new ArrayList<Card>();
-        for (String suit : RegularCard.suits) {
-            for (String rank : RegularCard.ranks) {
-                deck.add(new RegularCard(suit, rank));
+        for (String suit : GermanCard.suits) {
+            for (String rank : GermanCard.ranks) {
+                deck.add(new GermanCard(suit, rank));
             }
         }
+        deck.add(new Joker());
+        deck.add(new Joker());
+        
         toDeal = 27;
         minPlayers = 2;
         maxPlayers = 2;
