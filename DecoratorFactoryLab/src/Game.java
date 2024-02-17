@@ -16,7 +16,7 @@ public abstract class Game {
 		for(int i = 0; i < deck.size(); i++) { 
 			int j = (int)(Math.random() * deck.size());
 			Card temp = deck.get(i);
-			deck.set(i, deck.get(j)); // swap deck[i] and deck[j]
+			deck.set(i, deck.get(j)); // swap deck[i] and deck[j] 
 			deck.set(j, temp); // swap deck[j] and deck[i]
 		}
 	}
