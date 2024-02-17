@@ -8,7 +8,8 @@ public class War extends Game{
                 deck.add(new RegularCard(suit, rank));
             }
         }
-        toDeal = 27; 
+
+        toDeal = 26; 
         minPlayers = 2;
         maxPlayers = 2;
     }
@@ -32,5 +33,5 @@ public class War extends Game{
         }
         System.out.println(hands);
         return hands;
-    }   
+    }
 }
