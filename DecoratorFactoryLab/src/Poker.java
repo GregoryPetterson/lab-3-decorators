@@ -9,7 +9,7 @@ public class Poker extends Game {
                 deck.add(new RegularCard(suit, rank));
             }
         }
-        toDeal = 5;
+        toDeal = 25;
         minPlayers = 2;
         maxPlayers = 10;
     }
@@ -28,6 +28,7 @@ public class Poker extends Game {
             }
             hands.add(hand); // add the hand to the list of hands
         }
+        System.out.println(hands);
         return hands;
     }
 }
