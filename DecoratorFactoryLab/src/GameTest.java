@@ -6,36 +6,37 @@ public class GameTest {
         Game poker = gameStore.createGame("Poker");
         poker.shuffle();
         ArrayList<ArrayList<Card>> pokerHands = poker.deal(3);
+        poker.printDeck();
         printHands(pokerHands);
 
-        Game war = gameStore.createGame("War");
+        // Game war = gameStore.createGame("War");
 
-        war.shuffle();
-        ArrayList<ArrayList<Card>> warHands = war.deal(2);
+        // war.shuffle();
+        // ArrayList<ArrayList<Card>> warHands = war.deal(2);
 
-        printHands(warHands);
+        // printHands(warHands);
 
-        Game ginRummy = gameStore.createGame("GinRummy");
-        ginRummy.shuffle();
-        ArrayList<ArrayList<Card>> ginRummyHands = ginRummy.deal(2);
-        printHands(ginRummyHands);
+        // Game ginRummy = gameStore.createGame("GinRummy");
+        // ginRummy.shuffle();
+        // ArrayList<ArrayList<Card>> ginRummyHands = ginRummy.deal(2);
+        // printHands(ginRummyHands);
 
-        GermanGameStore germanGameStore = new GermanGameStore();
+        // GermanGameStore germanGameStore = new GermanGameStore();
 
-        Game germanPoker = germanGameStore.createGame("Poker");
-        germanPoker.shuffle();
-        ArrayList<ArrayList<Card>> germanPokerHands = germanPoker.deal(3);
-        printHands(germanPokerHands);
+        // Game germanPoker = germanGameStore.createGame("Poker");
+        // germanPoker.shuffle();
+        // ArrayList<ArrayList<Card>> germanPokerHands = germanPoker.deal(3);
+        // printHands(germanPokerHands);
 
-        Game germanWar = germanGameStore.createGame("War");
-        germanWar.shuffle();
-        ArrayList<ArrayList<Card>> germanWarHands = germanWar.deal(2);
-        printHands(germanWarHands);
+        // Game germanWar = germanGameStore.createGame("War");
+        // germanWar.shuffle();
+        // ArrayList<ArrayList<Card>> germanWarHands = germanWar.deal(2);
+        // printHands(germanWarHands);
 
-        Game germanGinRummy = germanGameStore.createGame("GinRummy");
-        germanGinRummy.shuffle();
-        ArrayList<ArrayList<Card>> germanGinRummyHands = germanGinRummy.deal(2);
-        printHands(germanGinRummyHands);
+        // Game germanGinRummy = germanGameStore.createGame("GinRummy");
+        // germanGinRummy.shuffle();
+        // ArrayList<ArrayList<Card>> germanGinRummyHands = germanGinRummy.deal(2);
+        // printHands(germanGinRummyHands);
 
 
     }
